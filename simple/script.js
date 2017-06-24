@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 		var thisID	=	$(this).attr('id');
 		var QR = this.dataset["qr"];
 		if(QR){
-			showQR();
+			showQR(QR);
 		}
 		if (thisID === 'BTC') {
 			new Clipboard('#BTCBn');
