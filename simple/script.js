@@ -1,9 +1,9 @@
 jQuery(document).ready(function() {
 	var QRBox	=	$('#QRBox');
 	var MainBox	=	$('#MainBox');
-	var BTCQR	=	'images/BTCQR.png';	// 二维码路径
-	var AliPayQR	=	'images/AliPayQR.png';
-	var WeChanQR	=	'images/WeChanQR.png';
+// 	var BTCQR	=	'images/BTCQR.png';	// 二维码路径
+// 	var AliPayQR	=	'images/AliPayQR.png';
+// 	var WeChanQR	=	'images/WeChanQR.png';
 
 	
 
@@ -19,17 +19,16 @@ jQuery(document).ready(function() {
 
 	$('#donateBox>li').click(function(event) {
 		var thisID	=	$(this).attr('id');
+		var QR = this.dataset["qr"];
+		if(QR){
+			showQR();
+		}
 		if (thisID === 'BTC') {
-			showQR(BTCQR);
 			new Clipboard('#BTCBn');
-		} else if (thisID === 'AliPay') {
-			showQR(AliPayQR);
-		} else if (thisID === 'WeChat') {
-			showQR(WeChanQR);
 		}
 	});
 
-	MainBox.click(function(event) {
+	QRBox.click(function(event) {
 		MainBox.removeClass('showQR').addClass('hideQR');
 		setTimeout (function(a) {
 			QRBox.fadeOut(300,function(argument) {

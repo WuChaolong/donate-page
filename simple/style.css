@@ -104,7 +104,7 @@ a{
 #donateBox>#BTC:hover {
 	overflow: visible;
 }
-#BTC>button {
+#BTC>button ,#BTC>a{
 	opacity: 0;
 	cursor: pointer;
 }
