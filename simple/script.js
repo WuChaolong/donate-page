@@ -42,8 +42,9 @@
 function load(){
 	var QRBox	=	document.querySelector('#QRBox');
 	var MainBox	=	document.querySelector('#MainBox');
+	var textBox	=	document.querySelector('#text');
 
-	function showQR(QR) {
+	function showQR(QR,text) {
 		if (QR) {
 			MainBox.style.backgroundImage = 'url('+QR+')';
 		}
@@ -52,14 +53,16 @@ function load(){
 		document.querySelector('#github').classList.add('blur');
 		QRBox.classList.add('show');
 		MainBox.classList.add('showQR');
+		textBox.innerHTML = text?text:"";
 	}
 	var lis = document.querySelectorAll('#donateBox>li');
 	for(var i = 0;i<lis.length;i++){
 		lis[i].onclick = function(event) {
 			var thisID	=	this.id;
 			var QR = this.dataset["qr"];
+			var text = this.dataset["text"];
 			if(QR){
-				showQR(QR);
+				showQR(QR,text);
 			}
 		}; 
 	}
