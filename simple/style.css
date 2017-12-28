@@ -1,8 +1,9 @@
-html, html>body {
+html {
 	margin: 0px !important;
 	padding: 0px !important;
 	height: 100%;
 	width: 100%;
+	/* height: 28px; */
 }
 body {
 	font-family: "Helvetica Neue", Ubuntu, "WenQuanYi Micro Hei", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Arial, sans-serif;
@@ -10,6 +11,15 @@ body {
 	line-height: 1.8em;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	background: #fff;
+	display: inline-block;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	height: 28px;
+	text-align: center;
 }
 img {border-width: 0px;}
 a{
@@ -25,7 +35,7 @@ a{
 	padding: 0px;
 }
 .pos-f {
-	position: fixed;
+	/* position: fixed; */
 }
 .left-100 {
 	width: 100%;
@@ -39,7 +49,7 @@ a{
 	transition: all .3s;
 }
 #DonateText {
-	position: fixed;
+	position: absolute;
 	font-size: 12px;
 	width: 70px;
 	height: 70px;
@@ -49,8 +59,9 @@ a{
 	background-size: 20px;
 	border-radius: 35px;
 	text-align: center;
-	left: calc(50% - 120px);
-	top: calc(50% - 60px);
+	/* left: calc(50% - 120px); */
+	/* top: calc(50% - 60px); */
+	bottom: 10px;
 	z-index: -1;
 	transform: rotatez(-15deg );
 }
@@ -60,7 +71,7 @@ a{
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	width: 299px;
+	/* width: 299px; */
 	height: 28px;
 	float: left;
 	z-index: 1;
@@ -122,6 +133,7 @@ a{
 	display: none;
 	perspective: 400px;
 	text-align:right;
+	position: fixed;
 }
 #QRBox.show{
 	display:initial;
@@ -156,7 +168,7 @@ a{
     transform-origin: center center;
     overflow: hidden;
 }
-#btc-key {
+#btc-key,#AliPay-key {
 	opacity: 0;
 	width: 2px;
 	height: 8px;
@@ -167,12 +179,16 @@ a{
 #github {
 	width: 24px;
 	height: 24px;
-	left: calc(50% + 135px);
-	top: calc(50% - 30px);
+	/* left: calc(50% + 135px); */
+	/* top: calc(50% - 30px); */
+	right: -8px;
+	top: -15px;
 	background: no-repeat center center url(images/github.svg);
 	background-size: contain;
 	opacity: 0.3;
 	transform: rotatez(15deg );
+	position: absolute;
+	z-index: -1;
 }
 [data-footnote] {
 	position: relative;
@@ -289,4 +305,18 @@ a{
 #text{
 	text-align: center;
 	padding: 0 .5em;
+}
+#text a{
+	text-decoration:underline;
+}
+
+.main{
+	position:relative;
+	display: inline-block;
+	/* left: 0; */
+	/* right: 0; */
+	/* top: 0; */
+	/* bottom: 0; */
+	/* margin: auto; */
+	/* position: absolute; */
 }

@@ -63,6 +63,9 @@ function load(){
 			var text = this.dataset["text"];
 			if(QR){
 				showQR(QR,text);
+// 				if(Clipboard){
+// 					new Clipboard(thisID);
+// 				}
 			}
 		}; 
 	}
