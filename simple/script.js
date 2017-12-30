@@ -44,7 +44,7 @@ function load(){
 	var MainBox	=	document.querySelector('#MainBox');
 	var textBox	=	document.querySelector('#text');
 
-	function showQR(QR,text) {
+	function showQR(QR,text,href) {
 		if (QR) {
 			MainBox.style.backgroundImage = 'url('+QR+')';
 		}
@@ -54,6 +54,8 @@ function load(){
 		QRBox.classList.add('show');
 		MainBox.classList.add('showQR');
 		textBox.innerHTML = text?text:"";
+
+		MainBox.href=href;
 	}
 	var lis = document.querySelectorAll('#donateBox>li');
 	for(var i = 0;i<lis.length;i++){
@@ -61,8 +63,9 @@ function load(){
 			var thisID	=	this.id;
 			var QR = this.dataset["qr"];
 			var text = this.dataset["text"];
+			var href = this.dataset["href"]
 			if(QR){
-				showQR(QR,text);
+				showQR(QR,text,href);
 // 				if(Clipboard){
 // 					new Clipboard(thisID);
 // 				}
