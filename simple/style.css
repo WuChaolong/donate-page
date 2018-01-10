@@ -10,7 +10,7 @@ body {
 	-webkit-font-smoothing:antialiased;
 	line-height: 1.8em;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	background: #fff;
+	/* background: #fff; */
 	display: inline-block;
 	left: 0;
 	right: 0;
@@ -19,7 +19,9 @@ body {
 	margin: auto;
 	position: absolute;
 	height: 28px;
+	/* width: 100%; */
 	text-align: center;
+	/* display: block; */
 }
 img {border-width: 0px;}
 a{
@@ -305,6 +307,10 @@ a{
 #text{
 	text-align: center;
 	padding: 0 .5em;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 #text a{
 	text-decoration:underline;

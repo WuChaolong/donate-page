@@ -54,7 +54,7 @@ function load(){
 		QRBox.classList.add('show');
 		MainBox.classList.add('showQR');
 		textBox.innerHTML = text?text:"";
-
+		href = href?href:"javascript:";
 		MainBox.href=href;
 	}
 	var lis = document.querySelectorAll('#donateBox>li');
